@@ -1,10 +1,10 @@
 .row
   .medium-6.columns.small-centered.text-center
-    %h1= current_user.org_name
-    %p= current_user.description
+    %h1= @user.org_name
+    %p= @user.description
     %hr
 
-    - if current_user.open?
+    - if @user.open?
       %p We're open! Swing by.
     - else
       %p We're closed. Check back later.
