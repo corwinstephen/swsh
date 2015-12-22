@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="medium-6 columns small-centered text-center">
+    <h1><%= current_user.org_name %></h1>
+    <hr />
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-6 columns small-centered text-center">
+    <% if current_user.open? %>
+      <p>You're open!</p>
+      <%= link_to "Be closed", close_path, method: :post, class: "button" %>
+    <% else %>
+      <p>You're closed.</p>
+      <%= link_to "Be open", open_path, method: :post, class: "button" %>
+    <% end %>
+    <hr />
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-6 columns small-centered text-center">
+    <p>Your org page:</p>
+    <input type="text" value="<%= user_url(current_user) %>" onclick="this.select();" />
+  </div>
+</div>

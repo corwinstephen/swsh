@@ -12,6 +12,7 @@ gem 'high_voltage'
 gem 'pg'
 gem 'haml'
 gem 'foundation-rails'
+gem 'friendly_id', '~> 5.1.0'
 
 
 group :development, :test do
