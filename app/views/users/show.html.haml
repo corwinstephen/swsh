@@ -1,4 +1,10 @@
 .row
   .medium-6.columns.small-centered.text-center
     %h1= current_user.org_name
-    %p We're open! Swing by.
+    %p= current_user.description
+    %hr
+
+    - if current_user.open?
+      %p We're open! Swing by.
+    - else
+      %p We're closed. Check back later.
